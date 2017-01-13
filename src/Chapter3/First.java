@@ -549,6 +549,7 @@ public class First {
 		
 	}
 	
+	//调整搜索二叉树中两个错误的节点
 	public static Node[] getTwoErrNodes(Node head){
 		Node[] errs =new Node[2];
 		if(head==null)
@@ -572,6 +573,9 @@ public class First {
 		}
 		return errs;
 	}
+	
+	
+	
 	
 	public static void main(String[] args){
 //		Node head=new Node(1);
