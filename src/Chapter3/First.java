@@ -574,7 +574,24 @@ public class First {
 		return errs;
 	}
 	
-	
+	public static void InOrderStack(Node head){
+		if(head==null)
+			return;
+		Stack<Node> stack=new Stack<Node>();
+		while(head!=null||!stack.isEmpty()){
+			if(head!=null){
+				stack.push(head);
+				head=head.left;
+			}
+			else{
+				head=stack.pop();
+				System.out.print(head.value+" ");
+				head=head.right;
+				
+			}
+							
+		}
+	}
 	
 	
 	public static void main(String[] args){
@@ -625,7 +642,10 @@ public class First {
 //		System.out.println();
 //		morrisPos(head);
 		
-		printByZigzag(head);
+//		printByZigzag(head);
+		InOrderStack(head);
+		System.out.println();
+		inOrderRecur(head);
 	}
 	
 	
